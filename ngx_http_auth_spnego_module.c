@@ -1263,8 +1263,8 @@ static ngx_int_t ngx_http_auth_spnego_obtain_server_credentials(
 
     char *principal_name = NULL;
     char *tgs_principal_name = NULL;
-    char kt_path[1024];
-    char cc_name[1024];
+    char kt_path[1024] = {0};
+    char cc_name[1024] = {0};
 
     memset(&creds, 0, sizeof(creds));
 
